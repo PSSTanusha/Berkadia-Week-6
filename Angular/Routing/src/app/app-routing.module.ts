@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { RevenueComponent } from './revenue/revenue.component';
-//import { AboutComponent } from './about/about.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path:'about',
     loadChildren:'./about/about.module#AboutModule'
+  },
+   {
+    path:'**',
+    component:PagenotfoundComponent
   }
 ];
 
